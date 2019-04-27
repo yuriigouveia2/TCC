@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#008590</color>
+    <color name="colorPrimaryLight">#FFFFFF</color>
+    <color name="colorAccent">#EE0000</color>
+    <!-- MINHAS CORES -->
+    <color name="ciano_100">#B2EBF2</color>
+</resources>

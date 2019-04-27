@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "691015331362",
+    "firebase_url": "https://safeband-tcc-2019.firebaseio.com",
+    "project_id": "safeband-tcc-2019",
+    "storage_bucket": "safeband-tcc-2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691015331362:android:ed8408995e2b8b0b",
+        "android_client_info": {
+          "package_name": "com.example.tcc.activities"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691015331362-5fppi7g52i65njm95s1ilmga1inkl9a3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr5qVZjF2I4yAxoZhcvz5K8tJ3MlGehak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691015331362-5fppi7g52i65njm95s1ilmga1inkl9a3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
