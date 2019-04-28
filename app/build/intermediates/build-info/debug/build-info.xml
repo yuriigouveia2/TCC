@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.3.2"
-    timestamp="1556402934611"
+    timestamp="1556423726786"
     token="-3205609816820175824"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="266" />
+        duration="242" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="63" />
+        duration="26" />
     <task
         name="verifier"
-        duration="4" />
+        duration="17" />
 
     <artifact
         location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
@@ -33,19 +33,31 @@
 
     <build
         build-mode="FULL"
-        timestamp="1556401750553"
+        timestamp="1556421304100"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -54,7 +66,31 @@
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1556423383536"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
@@ -65,17 +101,11 @@
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1556402309622"
+        timestamp="1556423552753"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -84,7 +114,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1556402934611"
+        timestamp="1556423726786"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_9.apk"

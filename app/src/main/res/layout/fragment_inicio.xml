@@ -35,7 +35,10 @@
                 android:src="@drawable/ic_security_btn"
                 app:civ_border_color="@color/colorPrimaryDark"
                 app:civ_border_width="4dp"
-                app:civ_circle_background_color="@color/ciano_100" />
+                app:civ_circle_background_color="@color/ciano_100"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="15dp"/>
 
         </RelativeLayout>
 

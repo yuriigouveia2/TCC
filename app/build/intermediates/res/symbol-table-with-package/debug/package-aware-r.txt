@@ -695,6 +695,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color orange_400
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1462,6 +1463,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string confirma_seguranca
 string default_web_client_id
 string email
 string email_recuperar_senha
@@ -1484,9 +1486,11 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string perigo
 string project_id
 string recuperar_senha
 string search_menu_title
+string seguro
 string senha
 string status_bar_notification_info_overflow
 string voltar_login
