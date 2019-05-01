@@ -96,6 +96,7 @@ public class InicioFragment extends Fragment {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     reference.child(idUsuario).child("SAFE").setValue(true);
+                                    reference.child(idUsuario).child("coordenadas").setValue(null);
                                     Toast.makeText(getContext(), "Você está em segurança!", Toast.LENGTH_LONG).show();
                                     dialog.dismiss();
                                 }
