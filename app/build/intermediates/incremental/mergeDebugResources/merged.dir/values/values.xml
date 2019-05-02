@@ -576,11 +576,14 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="adicionar">Adicionar</string>
     <string name="app_name">SafeBand</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="cadastrar">Não possui uma conta? Cadastre-se</string>
     <string name="cadastrar_action">Cadastrar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="carregando">Carregando...</string>
     <string name="character_counter_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
@@ -603,9 +606,11 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="confirma_seguranca">Confirma estar em segurança?</string>
     <string name="default_web_client_id" translatable="false">691015331362-5fppi7g52i65njm95s1ilmga1inkl9a3.apps.googleusercontent.com</string>
+    <string name="digite_email">Digite o email para adicionar aos amigos</string>
     <string name="email">E-mail</string>
     <string name="email_recuperar_senha">Informe seu e-mail</string>
     <string name="entrar_action">Entrar</string>
+    <string name="enviar_solicitacao">Enviar solicitação</string>
     <string name="esqueceu_senha">Esqueceu a senha? Clique aqui</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">android.support.design.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">android.support.design.transformation.FabTransformationSheetBehavior</string>
@@ -630,6 +635,7 @@
     <string name="search_menu_title">Search</string>
     <string name="seguro">Estou seguro</string>
     <string name="senha">Senha</string>
+    <string name="solicitacoes">Solicitações</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="voltar_login">Possui uma conta? Faça login</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

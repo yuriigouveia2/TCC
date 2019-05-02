@@ -1,5 +1,6 @@
 package com.example.tcc.activities;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -53,13 +54,16 @@ public class InicioFragment extends Fragment {
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    boolean SAFE = dataSnapshot.child(idUsuario).child("SAFE").getValue(Boolean.class);
+                    boolean SAFE = (boolean) dataSnapshot.child(idUsuario).child("SAFE").getValue();
 
-                    if(!SAFE) {
-                        safeBtn.setCircleBackgroundColor(getResources().getColor(R.color.orange_400));
-                    }
-                    else {
-                        safeBtn.setCircleBackgroundColor(getResources().getColor(R.color.ciano_100));
+                    Activity activity = getActivity();
+                    if(activity != null && isAdded()) {
+                        if(!SAFE) {
+                            safeBtn.setCircleBackgroundColor(activity.getResources().getColor(R.color.orange_400));
+                        }
+                        else {
+                            safeBtn.setCircleBackgroundColor(activity.getResources().getColor(R.color.ciano_100));
+                        }
                     }
                 }
 
@@ -117,5 +121,10 @@ public class InicioFragment extends Fragment {
         catch (Exception e) {
             throw e;
         }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
     }
 }

@@ -1046,6 +1046,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_danger_40dp
 drawable ic_email_black_24dp
 drawable ic_home_black_24dp
 drawable ic_key_black_24dp
@@ -1057,6 +1058,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_people_black_24dp
 drawable ic_person_black_24dp
 drawable ic_security_black_24dp
+drawable ic_security_black_40dp
 drawable ic_security_btn
 drawable ic_settings_black_24dp
 drawable mtrl_snackbar_background
@@ -1106,6 +1108,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id adicionar_amigos_btn
 id adjust_height
 id adjust_width
 id alertTitle
@@ -1176,9 +1179,11 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imagem
 id info
 id invisible
 id italic
+id item
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
@@ -1188,6 +1193,7 @@ id line1
 id line3
 id listMode
 id list_item
+id lista_amigos
 id masked
 id media_actions
 id message
@@ -1256,6 +1262,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id solicitacoes_amigos_btn
 id spacer
 id split_action_bar
 id spread
@@ -1375,6 +1382,7 @@ layout design_text_input_password_icon
 layout fragment_amigos
 layout fragment_configuracoes
 layout fragment_inicio
+layout list
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1438,11 +1446,14 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string adicionar
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string cadastrar
 string cadastrar_action
+string cancelar
+string carregando
 string character_counter_content_description
 string character_counter_pattern
 string common_google_play_services_enable_button
@@ -1465,9 +1476,11 @@ string common_signin_button_text
 string common_signin_button_text_long
 string confirma_seguranca
 string default_web_client_id
+string digite_email
 string email
 string email_recuperar_senha
 string entrar_action
+string enviar_solicitacao
 string esqueceu_senha
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -1492,6 +1505,7 @@ string recuperar_senha
 string search_menu_title
 string seguro
 string senha
+string solicitacoes
 string status_bar_notification_info_overflow
 string voltar_login
 style AlertDialog_AppCompat

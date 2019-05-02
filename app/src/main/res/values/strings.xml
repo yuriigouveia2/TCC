@@ -16,6 +16,12 @@
     <string name="confirma_seguranca">Confirma estar em segurança?</string>
     <string name="seguro">Estou seguro</string>
     <string name="perigo">Estou em perigo</string>
+    <string name="carregando">Carregando...</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="solicitacoes">Solicitações</string>
+    <string name="enviar_solicitacao">Enviar solicitação</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="digite_email">Digite o email para adicionar aos amigos</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

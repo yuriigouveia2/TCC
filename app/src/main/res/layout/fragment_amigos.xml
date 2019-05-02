@@ -5,10 +5,55 @@
     android:layout_height="match_parent"
     tools:context=".InicioFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <ListView
+            android:id="@+id/lista_amigos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="2.5dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:ignore="MissingConstraints"
+            android:layout_weight="10"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="90"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/solicitacoes_amigos_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/solicitacoes"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"/>
+
+            <Button
+                android:id="@+id/adicionar_amigos_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/adicionar"
+                android:backgroundTint="@android:color/darker_gray"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>
