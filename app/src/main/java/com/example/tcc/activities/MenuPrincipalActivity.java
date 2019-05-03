@@ -20,6 +20,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+
+import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -76,7 +78,7 @@ public class MenuPrincipalActivity extends AppCompatActivity implements BottomNa
 
     private void Notifica() {
         final DatabaseReference reference2 = firebaseDatabase.getReference();
-        reference.child("amigos").addValueEventListener(new ValueEventListener() {
+        reference.child("amigos").addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -87,16 +89,17 @@ public class MenuPrincipalActivity extends AppCompatActivity implements BottomNa
                     reference2.child(idAmigo).addValueEventListener(new ValueEventListener() {
 
                         @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        public void onDataChange(@NonNull final DataSnapshot dataSnapshot) {
                             final String nomeAmigo = dataSnapshot.child("nome").getValue(String.class);
+
+
 
                             if(!(boolean)dataSnapshot.child("SAFE").getValue()) {
                                 Handler handler = new Handler();
                                 Runnable thread = new Runnable() {
                                     @Override
                                     public void run() {
-                                        Random random = new Random();
-                                        int numero = random.nextInt(9999 - 1000) + 1000;
+                                        final int numero = StringParaNumero(nomeAmigo);
 
                                         notificacao = new NotificationCompat.Builder(getApplicationContext(), "1")
                                                 .setSmallIcon(R.drawable.ic_danger_40dp)
@@ -140,7 +143,6 @@ public class MenuPrincipalActivity extends AppCompatActivity implements BottomNa
                     public void onDataChange(@NonNull final DataSnapshot dataSnapshot) {
 
                         if(!dataSnapshot.child("SAFE").getValue(Boolean.class)) {
-                            Log.i("TAAAAAAAAAAAAG", String.valueOf(location.getLatitude()));
                             int tamanho = (int) dataSnapshot.child("coordenadas").getChildrenCount();
                             reference.child("coordenadas").child(String.valueOf(tamanho + 1)).child("lat").setValue(location.getLatitude());
                             reference.child("coordenadas").child(String.valueOf(tamanho + 1)).child("lon").setValue(location.getLongitude());
@@ -230,6 +232,23 @@ public class MenuPrincipalActivity extends AppCompatActivity implements BottomNa
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
         notification.cancelAll();
+        this.finish();
+    }
+
+    private int StringParaNumero(String nome) {
+        char[] nomeArray = nome.replaceAll("\\s","").toCharArray();
+        String numeroFinal = "";
+
+        for(char letra : nomeArray) {
+            numeroFinal = numeroFinal.concat(String.valueOf(Character.getNumericValue(letra)));
+        }
+
+        if(numeroFinal.length() > 8) {
+            numeroFinal = numeroFinal.substring(0,8);
+        }
+
+        return Integer.parseInt(numeroFinal);
     }
 }

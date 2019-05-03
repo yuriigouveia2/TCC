@@ -59,6 +59,7 @@
                 android:layout_gravity="center"
                 android:background="@color/colorPrimaryDark"
                 android:text="@string/recuperar_senha"
+                android:textAllCaps="false"
                 android:textColor="@android:color/white"/>
 
 

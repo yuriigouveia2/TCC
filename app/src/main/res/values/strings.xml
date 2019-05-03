@@ -22,6 +22,7 @@
     <string name="enviar_solicitacao">Enviar solicitação</string>
     <string name="cancelar">Cancelar</string>
     <string name="digite_email">Digite o email para adicionar aos amigos</string>
+    <string name="lista_amigos">Lista de Amigos</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

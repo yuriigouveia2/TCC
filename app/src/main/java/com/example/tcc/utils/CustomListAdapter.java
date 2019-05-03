@@ -14,15 +14,16 @@ import java.util.ArrayList;
 public class CustomListAdapter extends ArrayAdapter<String> {
 
     private Context context;
-    private ArrayList itemName;
+    private ArrayList itemName, image;
     private int resource;
 
-    public CustomListAdapter(Context context, int resource, ArrayList<String> itemName) {
-        super(context, com.example.tcc.activities.R.layout.list, itemName);
+    public CustomListAdapter(Context context, int resource, ArrayList<String> itemName, ArrayList<Integer> image) {
+        super(context, resource, itemName);
 
         this.context = context;
         this.itemName = itemName;
         this.resource = resource;
+        this.image = image;
     }
 
     public View getView(int posicao, View view, ViewGroup parent){
@@ -32,8 +33,8 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         TextView txtTitle = rowView.findViewById(com.example.tcc.activities.R.id.item);
         ImageView imageView = rowView.findViewById(com.example.tcc.activities.R.id.imagem);
 
-        txtTitle.setText(itemName.indexOf(posicao));
-        imageView.setImageResource(com.example.tcc.activities.R.drawable.ic_security_black_40dp);
+        txtTitle.setText(getItem(posicao));
+        imageView.setImageResource((int)image.get(posicao));
 
         return rowView;
     }

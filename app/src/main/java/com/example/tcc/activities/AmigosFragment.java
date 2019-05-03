@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NotificationCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,8 +46,7 @@ public class AmigosFragment extends Fragment {
     private Button adicionarBtn, solicitacoesBtn;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_amigos, container, false);
 
@@ -57,39 +57,66 @@ public class AmigosFragment extends Fragment {
         adicionarBtn = view.findViewById(R.id.adicionar_amigos_btn);
         solicitacoesBtn = view.findViewById(R.id.solicitacoes_amigos_btn);
 
-        CarregaListaAmigos();
+        CarregaListaAmigos(inflater);
         GerenciaBotoes();
 
         return view;
     }
 
 
-    private void CarregaListaAmigos() {
-        final List<String> listaIds = new ArrayList<>();
+    private void CarregaListaAmigos(final LayoutInflater inflater) {
+        final ArrayList<String> listaNomes = new ArrayList<>();
+        final ArrayList<Integer> listaImage = new ArrayList<>();
+        final ArrayList<String> listaIds = new ArrayList<>();
 
         reference.child(firebaseAuth.getCurrentUser().getUid()).child("amigos").addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                for (DataSnapshot snap : dataSnapshot.getChildren()) {
+                for (final DataSnapshot snap : dataSnapshot.getChildren()) {
                     String idAmigo = snap.getKey();
 
                     reference.child(idAmigo).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             final String nomeAmigo = dataSnapshot.child("nome").getValue(String.class);
+                            boolean safe = dataSnapshot.child("SAFE").getValue(Boolean.class);
+                            int image = R.drawable.ic_security_black_40dp;
 
-                            listaIds.add(nomeAmigo);
-                            arrayAdapter = new ArrayAdapter<>(getContext(), R.layout.list, R.id.item, listaIds);
+                            if(!safe) {
+                                image = R.drawable.ic_danger_40dp;
+                            }
+
+                            if(!listaNomes.contains(nomeAmigo)) {
+                                listaNomes.add(nomeAmigo);
+                                listaImage.add(image);
+                                listaIds.add(dataSnapshot.getKey());
+                            }
+                            else{
+                                int pos = listaNomes.indexOf(nomeAmigo);
+                                listaImage.set(pos, image);
+                            }
+                            arrayAdapter = new CustomListAdapter(inflater.getContext(), R.layout.list, listaNomes, listaImage);
                             listaAmigos.setAdapter(arrayAdapter);
 
-                            if(!dataSnapshot.child("SAFE").getValue(Boolean.class)) {
+                            if(!safe) {
                                 listaAmigos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                     @Override
                                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                        // TODO: Iniciar MapFragment
-                                        Toast.makeText(getContext(), "MAP", Toast.LENGTH_SHORT).show();
+
+                                        if(listaImage.get(i) == R.drawable.ic_danger_40dp) {
+                                            Bundle bundle = new Bundle();
+                                            bundle.putString("id", listaIds.get(i));
+                                            Fragment fragment = new MapaFragment();
+                                            fragment.setArguments(bundle);
+
+                                            CarregaFragment(fragment);
+                                            Toast.makeText(getContext(), "Localização de " + adapterView.getItemAtPosition(i), Toast.LENGTH_SHORT).show();
+                                        }
+                                        else {
+                                            Toast.makeText(getContext(), adapterView.getItemAtPosition(i) + " não está em perigo", Toast.LENGTH_SHORT).show();
+                                        }
                                     }
                                 });
                             }
@@ -130,11 +157,31 @@ public class AmigosFragment extends Fragment {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
+                                        String myId = firebaseAuth.getCurrentUser().getUid();
                                         if(dataSnapshot.getValue() != null) {
-                                            for(DataSnapshot snap : dataSnapshot.getChildren()) {
-                                                if(snap.getKey() != null) {
-                                                    Toast.makeText(getContext(), "Solicitação enviada!", Toast.LENGTH_LONG).show();
-                                                    reference.child(snap.getKey()).child("solicitacoes").child(firebaseAuth.getCurrentUser().getUid()).setValue(true);
+                                            for(final DataSnapshot snap : dataSnapshot.getChildren()) {
+                                                if(snap.getKey() != null && !snap.getKey().equals(myId)) {
+                                                    reference.child(myId).addListenerForSingleValueEvent(new ValueEventListener() {
+                                                        @Override
+                                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                            if(dataSnapshot.child("amigos").hasChild(snap.getKey())) {
+                                                                Toast.makeText(getContext(), "Este usuário já é seu amigo!", Toast.LENGTH_LONG).show();
+                                                            }
+                                                            else if(dataSnapshot.child("solicitacoes").hasChild(snap.getKey())){
+                                                                Toast.makeText(getContext(), "Você já enviou uma solicitação para esse usuário!", Toast.LENGTH_LONG).show();
+                                                            }
+                                                            else{
+                                                                Toast.makeText(getContext(), "Solicitação enviada!", Toast.LENGTH_LONG).show();
+                                                                reference.child(snap.getKey()).child("solicitacoes").child(firebaseAuth.getCurrentUser().getUid()).setValue(true);
+                                                            }
+                                                        }
+
+                                                        @Override
+                                                        public void onCancelled(@NonNull DatabaseError databaseError) {}
+                                                    });
+                                                }
+                                                else if(snap.getKey().equals(firebaseAuth.getCurrentUser().getUid())) {
+                                                    Toast.makeText(getContext(), "Você não pode enviar uma solicitação para você mesmo!", Toast.LENGTH_LONG).show();
                                                 }
                                                 else {
                                                     Toast.makeText(getContext(), "O e-mail fornecido não existe!", Toast.LENGTH_LONG).show();
@@ -165,5 +212,27 @@ public class AmigosFragment extends Fragment {
                 builder.show();
             }
         });
+
+        solicitacoesBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new SolicitacoesAmizadeFragment();
+                CarregaFragment(fragment);
+            }
+        });
+    }
+
+    private boolean CarregaFragment(Fragment fragment) {
+        FragmentActivity activity = getActivity();
+        if(fragment != null && activity != null) {
+            activity
+            .getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit();
+
+            return true;
+        }
+        return false;
     }
 }

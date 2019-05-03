@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-55:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\8202b3c76263cdd53e9c7bec5ba3441f\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\80254fc0781162a0269a989fbf0a9391\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\0b3f37806c7f1002809fed247cd39205\AndroidManifest.xml:2:1-11:12
@@ -12,6 +12,7 @@ MERGED from [com.google.firebase:firebase-core:16.0.8] C:\Users\yurig\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\2e1726abe32063081ca732166fca0c50\AndroidManifest.xml:17:1-42:12
 MERGED from [com.google.firebase:firebase-database:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\238e25dd7ea95ccfef1b7f4d5c40ea16\AndroidManifest.xml:15:1-36:12
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\8f8707ac08dd7cc01a52e89e644a9703\AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:17:1-38:12
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\b077906c5a560ca9712eb443551bb2a2\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\0d610b144387d93ee66659a7a48eb66c\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\877d83bef3c1f963c265726109f48e9e\AndroidManifest.xml:2:1-10:12
@@ -63,20 +64,20 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\yurig\.gradle\cache
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e5009fd52ceef45e6e91f69a281273e1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\907d07a88a25b81024dec9ae36d211f3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\4c2b7b42339e97804772a508e4c96aa7\AndroidManifest.xml:2:1-7:12
-INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-55:12
 	package
 		ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:3:5-41
 		INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-42:12
+		ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-55:12
 		INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-42:12
+		ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:1-55:12
 		INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:2:11-69
@@ -84,6 +85,8 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:6:5-67
 MERGED from [com.google.firebase:firebase-database:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\238e25dd7ea95ccfef1b7f4d5c40ea16\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\238e25dd7ea95ccfef1b7f4d5c40ea16\AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\86197eb0537071ed5225a78a2bd4be18\AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\86197eb0537071ed5225a78a2bd4be18\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\2c6ff21693ebe823a10ba7530d1b0f91\AndroidManifest.xml:23:5-67
@@ -117,7 +120,7 @@ ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest
 	android:name
 		ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:12:22-69
 application
-ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:14:5-40:19
+ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:14:5-53:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\8202b3c76263cdd53e9c7bec5ba3441f\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\8202b3c76263cdd53e9c7bec5ba3441f\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\0b3f37806c7f1002809fed247cd39205\AndroidManifest.xml:9:5-20
@@ -130,6 +133,8 @@ MERGED from [com.google.firebase:firebase-database:16.1.0] C:\Users\yurig\.gradl
 MERGED from [com.google.firebase:firebase-database:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\238e25dd7ea95ccfef1b7f4d5c40ea16\AndroidManifest.xml:28:5-34:19
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\8f8707ac08dd7cc01a52e89e644a9703\AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\8f8707ac08dd7cc01a52e89e644a9703\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:30:5-36:19
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\b077906c5a560ca9712eb443551bb2a2\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\b077906c5a560ca9712eb443551bb2a2\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\877d83bef3c1f963c265726109f48e9e\AndroidManifest.xml:7:5-8:19
@@ -230,6 +235,12 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:37:17-77
 	android:name
 		ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:37:27-74
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:49:9-51:71
+	android:value
+		ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:51:13-68
+	android:name
+		ADDED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml:50:13-58
 uses-sdk
 INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\yurig\AndroidStudioProjects\TCC\app\src\main\AndroidManifest.xml
@@ -250,6 +261,8 @@ MERGED from [com.google.firebase:firebase-database:16.1.0] C:\Users\yurig\.gradl
 MERGED from [com.google.firebase:firebase-database:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\238e25dd7ea95ccfef1b7f4d5c40ea16\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\8f8707ac08dd7cc01a52e89e644a9703\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\8f8707ac08dd7cc01a52e89e644a9703\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:20:5-44
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\b077906c5a560ca9712eb443551bb2a2\AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\b077906c5a560ca9712eb443551bb2a2\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\0d610b144387d93ee66659a7a48eb66c\AndroidManifest.xml:20:5-44
@@ -400,6 +413,8 @@ ADDED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\yurig\.gradle\cac
 		ADDED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\2e1726abe32063081ca732166fca0c50\AndroidManifest.xml:37:17-109
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-database:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\238e25dd7ea95ccfef1b7f4d5c40ea16\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\86197eb0537071ed5225a78a2bd4be18\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\86197eb0537071ed5225a78a2bd4be18\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\2c6ff21693ebe823a10ba7530d1b0f91\AndroidManifest.xml:22:5-79
@@ -436,6 +451,18 @@ ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yurig\.gr
 		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\8f8707ac08dd7cc01a52e89e644a9703\AndroidManifest.xml:36:13-107
 	android:name
 		ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\8f8707ac08dd7cc01a52e89e644a9703\AndroidManifest.xml:34:13-89
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:28:9-32
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\e97d9e0a9148113fb2a0adf4e0847eb4\AndroidManifest.xml:34:13-50
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-measurement-api:16.4.0] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\86197eb0537071ed5225a78a2bd4be18\AndroidManifest.xml:24:5-68
 MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\yurig\.gradle\caches\transforms-2\files-2.1\2c6ff21693ebe823a10ba7530d1b0f91\AndroidManifest.xml:24:5-68
