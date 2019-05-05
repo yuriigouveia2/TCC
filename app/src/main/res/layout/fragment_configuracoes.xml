@@ -5,10 +5,43 @@
     android:layout_height="match_parent"
     tools:context=".InicioFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/limparCoordBtn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:text="@string/limpar_coord"/>
+
+        <Button
+            android:id="@+id/alterarSenhaBtn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:text="@string/trocar_senha"/>
+
+        <Button
+            android:id="@+id/sairContaBtn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:text="@string/sair_conta"/>
+    </LinearLayout>
 
 </FrameLayout>

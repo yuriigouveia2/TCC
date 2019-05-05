@@ -100,7 +100,6 @@ public class InicioFragment extends Fragment {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     reference.child(idUsuario).child("SAFE").setValue(true);
-                                    reference.child(idUsuario).child("coordenadas").setValue(null);
                                     Toast.makeText(getContext(), "Você está em segurança!", Toast.LENGTH_LONG).show();
                                     dialog.dismiss();
                                 }
@@ -108,8 +107,9 @@ public class InicioFragment extends Fragment {
                             .setNegativeButton(R.string.perigo, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    // Não fazer nada
-                                    dialog.cancel();
+                                    reference.child(idUsuario).child("SAFE").setValue(false);
+                                    Toast.makeText(getContext(), "Você está em perigo!", Toast.LENGTH_LONG).show();
+                                    dialog.dismiss();
                                 }
                             })
                             .show();

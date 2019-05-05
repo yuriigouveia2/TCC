@@ -20,6 +20,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
@@ -92,28 +93,30 @@ public class MenuPrincipalActivity extends AppCompatActivity implements BottomNa
                         public void onDataChange(@NonNull final DataSnapshot dataSnapshot) {
                             final String nomeAmigo = dataSnapshot.child("nome").getValue(String.class);
 
+                            Handler handler = new Handler();
+                            Runnable thread = new Runnable() {
+                                @Override
+                                public void run() {
+                                    final int numero = StringParaNumero(nomeAmigo);
 
+                                    notificacao = new NotificationCompat.Builder(getApplicationContext(), "1")
+                                            .setSmallIcon(R.drawable.ic_danger_40dp)
+                                            .setColor(getResources().getColor(R.color.ciano_100))
+                                            .setContentTitle("SafeBand")
+                                            .setContentText(nomeAmigo + " está em perigo.")
+                                            .setPriority(NotificationManager.IMPORTANCE_HIGH);
 
-                            if(!(boolean)dataSnapshot.child("SAFE").getValue()) {
-                                Handler handler = new Handler();
-                                Runnable thread = new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        final int numero = StringParaNumero(nomeAmigo);
-
-                                        notificacao = new NotificationCompat.Builder(getApplicationContext(), "1")
-                                                .setSmallIcon(R.drawable.ic_danger_40dp)
-                                                .setColor(getResources().getColor(R.color.ciano_100))
-                                                .setContentTitle("SafeBand")
-                                                .setContentText(nomeAmigo + " está em perigo.")
-                                                .setPriority(NotificationManager.IMPORTANCE_HIGH);
-
-                                        notification = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                                    notification = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                                    if(!(boolean)dataSnapshot.child("SAFE").getValue()) {
                                         notification.notify(numero, notificacao.build());
                                     }
-                                };
-                                handler.post(thread);
-                            }
+                                    else {
+                                        notification.cancel(numero);
+                                    }
+                                }
+                            };
+                            handler.post(thread);
+
                         }
 
                         @Override
@@ -143,9 +146,10 @@ public class MenuPrincipalActivity extends AppCompatActivity implements BottomNa
                     public void onDataChange(@NonNull final DataSnapshot dataSnapshot) {
 
                         if(!dataSnapshot.child("SAFE").getValue(Boolean.class)) {
-                            int tamanho = (int) dataSnapshot.child("coordenadas").getChildrenCount();
-                            reference.child("coordenadas").child(String.valueOf(tamanho + 1)).child("lat").setValue(location.getLatitude());
-                            reference.child("coordenadas").child(String.valueOf(tamanho + 1)).child("lon").setValue(location.getLongitude());
+                            int tamanho = (int) dataSnapshot.child("coordenadas").getChildrenCount();//tamanho+1
+
+                            reference.child("coordenadas").child(String.valueOf(0)).child("lat").setValue(location.getLatitude());
+                            reference.child("coordenadas").child(String.valueOf(0)).child("lon").setValue(location.getLongitude());
                         }
                     }
                     @Override
@@ -179,7 +183,7 @@ public class MenuPrincipalActivity extends AppCompatActivity implements BottomNa
             return;
         }
         else {
-            locationManager.requestLocationUpdates("gps", 5000, 0, locationListener);
+            locationManager.requestLocationUpdates("gps", 2000, 0, locationListener);
         }
     }
 
@@ -190,7 +194,7 @@ public class MenuPrincipalActivity extends AppCompatActivity implements BottomNa
         switch(requestCode){
             case 10:
                 if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
-                    locationManager.requestLocationUpdates("gps", 5000, 0, locationListener);
+                    locationManager.requestLocationUpdates("gps", 2000, 0, locationListener);
                 return;
         }
     }
@@ -232,8 +236,6 @@ public class MenuPrincipalActivity extends AppCompatActivity implements BottomNa
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
-        notification.cancelAll();
         this.finish();
     }
 

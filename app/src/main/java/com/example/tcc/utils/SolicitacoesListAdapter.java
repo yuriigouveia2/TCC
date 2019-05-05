@@ -77,6 +77,8 @@ public class SolicitacoesListAdapter extends ArrayAdapter<String> {
                 itemName.remove(posicao);
                 reference.child(firebaseAuth.getCurrentUser().getUid()).child("solicitacoes").child(id).setValue(null);
                 reference.child(firebaseAuth.getCurrentUser().getUid()).child("amigos").child(id).setValue(true);
+                reference.child(id).child("amigos").child(firebaseAuth.getCurrentUser().getUid()).setValue(true);
+                reference.child(id).child("solicitacoes").child(firebaseAuth.getCurrentUser().getUid()).setValue(null);
                 Toast.makeText(v.getContext(), "Solicitação aceita", Toast.LENGTH_LONG).show();
             }
         });
@@ -87,6 +89,7 @@ public class SolicitacoesListAdapter extends ArrayAdapter<String> {
                 String id = getItem(posicao);
                 itemName.remove(posicao);
                 reference.child(firebaseAuth.getCurrentUser().getUid()).child("solicitacoes").child(id).setValue(null);
+                reference.child(id).child("solicitacoes").child(firebaseAuth.getCurrentUser().getUid()).setValue(null);
                 Toast.makeText(v.getContext(), "Solicitação negada", Toast.LENGTH_LONG).show();
             }
         });

@@ -23,6 +23,9 @@
     <string name="cancelar">Cancelar</string>
     <string name="digite_email">Digite o email para adicionar aos amigos</string>
     <string name="lista_amigos">Lista de Amigos</string>
+    <string name="limpar_coord">Apagar coordenadas de localização</string>
+    <string name="sair_conta">Sair da conta</string>
+    <string name="trocar_senha">Alterar senha</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -123,7 +123,6 @@ public class LoginActivity extends AppCompatActivity {
 
             String email = emailLogin.getText().toString();
             String senha = senhaLogin.getText().toString();
-            Log.i("TAG", "MSSSSSSSSSSSSSSSSSSSSG: " + email);
 
             firebaseAuth.signInWithEmailAndPassword(email, senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override

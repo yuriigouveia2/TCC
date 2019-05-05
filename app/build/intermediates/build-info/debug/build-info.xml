@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.3.2"
-    timestamp="1556857689623"
+    timestamp="1557026929937"
     token="-3205609816820175824"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="309" />
+        duration="521" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="33" />
+        duration="45" />
     <task
         name="verifier"
-        duration="2" />
+        duration="9" />
 
     <artifact
         location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
@@ -33,14 +33,8 @@
 
     <build
         build-mode="FULL"
-        timestamp="1556855500076"
+        timestamp="1557026135947"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
@@ -71,11 +65,17 @@
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1556857579134"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1557026507011"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -84,7 +84,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1556857689623"
+        timestamp="1557026929937"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\yurig\AndroidStudioProjects\TCC\app\build\intermediates\split-apk\debug\slices\slice_9.apk"

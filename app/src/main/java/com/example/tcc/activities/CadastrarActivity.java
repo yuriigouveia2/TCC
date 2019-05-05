@@ -74,7 +74,7 @@ public class CadastrarActivity extends AppCompatActivity {
 
                         if(task.isSuccessful()){
                             reference.child(firebaseAuth.getCurrentUser().getUid()).child("nome").setValue(nome);
-                            reference.child(firebaseAuth.getCurrentUser().getUid()).child("safe").setValue(true);
+                            reference.child(firebaseAuth.getCurrentUser().getUid()).child("SAFE").setValue(true);
                             reference.child(firebaseAuth.getCurrentUser().getUid()).child("email").setValue(email);
                             Toast.makeText(CadastrarActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_LONG).show();
 
